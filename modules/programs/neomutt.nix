@@ -200,7 +200,7 @@ let
       signature = (if (account.signature.showSignature == "none") then
         "unset signature"
       else if account.signature.command != null then
-        ''set signature = "${account.signature.command}|"''
+        ''set signature = "${toString account.signature.command}|"''
       else
         "set signature = ${
           pkgs.writeText "signature.txt" account.signature.text

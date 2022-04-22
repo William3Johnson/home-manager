@@ -45,7 +45,7 @@ let
       };
 
       command = mkOption {
-        type = with types; nullOr str;
+        type = with types; nullOr (either str path);
         default = null;
         example = "./signature.sh";
         description = "A command that generates a signature.";
